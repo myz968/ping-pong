@@ -1,0 +1,31 @@
+{
+  "name": "@local/fzd-pet",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "FZD 黏土桌宠（合并版）：四态驱动（待命/干活/等待确认/出错）+ 状态面板 + 消息图标球",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "client.template.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "frames/*.webp",
+    "tools/build-client.py"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

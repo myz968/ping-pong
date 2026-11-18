@@ -1,0 +1,3 @@
+- insert:
+    - id: fzd-pet
+      name: '@local/fzd-pet'
